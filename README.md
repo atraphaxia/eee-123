@@ -1,3 +1,3 @@
 # eee-121
 
-PDF solutions to EEE 121 problems.
+LaTeX solutions to EEE 121 problems.
