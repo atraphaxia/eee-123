@@ -1,0 +1,129 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <atraphaxia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+
+
+\documentclass{article}
+
+
+
+\usepackage{adjustbox}
+\usepackage{amsmath}
+\usepackage{circuitikz}
+\usepackage{empheq}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{siunitx}
+
+
+
+\ctikzset{american}
+
+
+
+\title{
+	EEE 123 \\
+	Exercise 2
+}
+
+\author{
+	Nile Jocson \\
+	\textless{}atraphaxia@gmail.com\textgreater{}
+}
+
+
+
+
+\begin{document}
+	\maketitle{}
+		\pagebreak{}
+
+	\tableofcontents{}
+		\pagebreak{}
+
+	\section{}
+		Show your solutions on the space provided. You may use the back of the page as
+		continuation of your solution. Please write legibly. \textbf{Box your final
+		answers.} Use at least 2 decimal places if the answer is fractional.
+
+
+
+		\subsection{}
+			Use a combination of source transformation and circuit equivalence to find $V$
+			and $I$ in the circuit below.
+			\begin{center}\begin{circuitikz}
+				\draw(0, 0)
+					to[short, -*] ++(-3, 0)
+					to[short, -*] ++(-3, 0)
+					to[short] ++(-3, 0)
+					to[V, invert, a = \qty{18}{\volt}] ++(0, 3)
+					to[R, l = \qty{3}{\ohm}, -*] ++(3, 0)
+					to[short, -*] ++(3, 0)
+					to[R, l = \qty{4}{\ohm}, i = $I$] ++(3, 0)
+					to[R, l = \qty{8}{\ohm}, v = $V$] ++(0, -3);
+				\draw(-3, 0)
+					to[I, l = \qty{4}{\ampere}] ++(0, 3);
+				\draw(-6, 0)
+					to[R, a = \qty{6}{\ohm}] ++(0, 3);
+			\end{circuitikz}\end{center}
+
+			Transform the \qty{18}{\volt} source.
+				\[I_{\text{eq}} = \frac{18}{3} = 6\]
+
+			\begin{center}\begin{circuitikz}
+				\draw(0, 0)
+					to[short, -*] ++(-3, 0)
+					to[short, -*] ++(-3, 0)
+					to[short, -*] ++(-3, 0)
+					to[short] ++(-3, 0)
+					to[I, a = \qty{6}{\ampere}] ++(0, 3)
+					to[short, -*] ++(3, 0)
+					to[short, -*] ++(3, 0)
+					to[short, -*] ++(3, 0)
+					to[R, l = \qty{4}{\ohm}, i = $I$] ++(3, 0)
+					to[R, l = \qty{8}{\ohm}, v = $V$] ++(0, -3);
+				\draw(-3, 0)
+					to[I, l = \qty{4}{\ampere}] ++(0, 3);
+				\draw(-6, 0)
+					to[R, a = \qty{6}{\ohm}] ++(0, 3);
+				\draw(-9, 0)
+					to[R, a = \qty{3}{\ohm}] ++(0, 3);
+			\end{circuitikz}\end{center}
+
+			Combine parallel current sources and resistors.
+				\[I_{\text{eq}} = 6 + 4 = 10\]
+				\[R_{\text{eq}} = {\left(\frac{1}{6} + \frac{1}{4}\right)}^{-1} = 2\]
+
+			\begin{center}\begin{circuitikz}
+				\draw(0, 0)
+					to[short, -*] ++(-3, 0)
+					to[short] ++(-3, 0)
+					to[I, a = \qty{10}{\ampere}] ++(0, 3)
+					to[short, -*] ++(3, 0)
+					to[R, l = \qty{4}{\ohm}, i = $I$] ++(3, 0)
+					to[R, l = \qty{8}{\ohm}, v = $V$] ++(0, -3);
+				\draw(-3, 0)
+					to[R, l = \qty{2}{\ohm}] ++(0, 3);
+				\draw[dashed, color = red] (-2.75, 3.75)
+					-- (0.75, 3.75)
+					-- (0.75, -0.25)
+					-- (-0.75, -0.25)
+					-- (-0.75, 2.25)
+					-- (-2.75, 2.25)
+					-- cycle;
+				\draw[color = red] (0.75, 3.75) node[label = $\qty{12}{\ohm}$] {};
+			\end{circuitikz}\end{center}
+
+			Solve for $I$:
+				\[I = 10\left(\frac{\frac{1}{12}}{\frac{1}{12} + \frac{1}{2}}\right) = \frac{10}{7}\]
+
+			Solve for $V$:
+				\[V = 8\left(\frac{10}{7}\right) = \frac{80}{7}\]
+
+			Final answer:
+				\begin{empheq}[box=\fbox]{align*}
+					V &= \qty{11.43}{\volt} \\
+					I &= \qty{1.43}{\ampere}
+				\end{empheq}
+
+			\pagebreak{}
+\end{document}
