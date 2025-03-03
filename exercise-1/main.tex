@@ -69,68 +69,68 @@
 			\end{circuitikz}\end{adjustbox}
 
 			KCL $V_1$:
-			\[\frac{V_1 - 20}{10} + \frac{V_1 - V_2}{5} + I_x = 0\]
+				\[\frac{V_1 - 20}{10} + \frac{V_1 - V_2}{5} + I_x = 0\]
 
 			KCL $V_2$:
-			\[-\frac{3}{2}I_x + \frac{V_2 - V_1}{5} + \frac{V_2}{5} = 0\]
+				\[-\frac{3}{2}I_x + \frac{V_2 - V_1}{5} + \frac{V_2}{5} = 0\]
 
 			We also have:
-			\[I_x = \frac{V_1 - 6V_2}{40}\]
+				\[I_x = \frac{V_1 - 6V_2}{40}\]
 
 			List down the system of equations:
-			\begin{equation*}\begin{cases}
-				\displaystyle \frac{V_1 - 20}{10} + \frac{V_1 - V_2}{5} + I_x = 0 \\ \\
-				\displaystyle -\frac{3}{2}I_x + \frac{V_2 - V_1}{5} + \frac{V_2}{5} = 0 \\ \\
-				\displaystyle I_x = \frac{V_1 - 6V_2}{40}
-			\end{cases}\end{equation*}
+				\begin{equation*}\begin{cases}
+					\displaystyle \frac{V_1 - 20}{10} + \frac{V_1 - V_2}{5} + I_x = 0 \\ \\
+					\displaystyle -\frac{3}{2}I_x + \frac{V_2 - V_1}{5} + \frac{V_2}{5} = 0 \\ \\
+					\displaystyle I_x = \frac{V_1 - 6V_2}{40}
+				\end{cases}\end{equation*}
 
 			Substitute $I_x$:
-			\begin{equation*}\begin{cases}
-				\displaystyle \frac{V_1 - 20}{10} + \frac{V_1 - V_2}{5} + \frac{V_1 - 6V_2}{40} = 0 \\ \\
-				\displaystyle -\frac{3}{2}\left(\frac{V_1 - 6V_2}{40}\right) + \frac{V_2 - V_1}{5} + \frac{V_2}{5} = 0
-			\end{cases}\end{equation*}
-			\begin{equation*}\begin{cases}
-				\displaystyle \frac{V_1 - 20}{10} + \frac{V_1 - V_2}{5} + \frac{V_1 - 6V_2}{40} = 0 \\ \\
-				\displaystyle -\frac{3V_1 - 18V_2}{80} + \frac{V_2 - V_1}{5} + \frac{V_2}{5} = 0
-			\end{cases}\end{equation*}
+				\begin{equation*}\begin{cases}
+					\displaystyle \frac{V_1 - 20}{10} + \frac{V_1 - V_2}{5} + \frac{V_1 - 6V_2}{40} = 0 \\ \\
+					\displaystyle -\frac{3}{2}\left(\frac{V_1 - 6V_2}{40}\right) + \frac{V_2 - V_1}{5} + \frac{V_2}{5} = 0
+				\end{cases}\end{equation*}
+				\begin{equation*}\begin{cases}
+					\displaystyle \frac{V_1 - 20}{10} + \frac{V_1 - V_2}{5} + \frac{V_1 - 6V_2}{40} = 0 \\ \\
+					\displaystyle -\frac{3V_1 - 18V_2}{80} + \frac{V_2 - V_1}{5} + \frac{V_2}{5} = 0
+				\end{cases}\end{equation*}
 
 			Simplify:
-			\begin{equation*}\begin{cases}
-				\displaystyle 40\left(\frac{V_1 - 20}{10} + \frac{V_1 - V_2}{5} + \frac{V_1 - 6V_2}{40}\right) = 0 \\ \\
-				\displaystyle 80\left(-\frac{3V_1 - 18V_2}{80} + \frac{V_2 - V_1}{5} + \frac{V_2}{5}\right) = 0
-			\end{cases}\end{equation*}
-			\begin{equation*}\begin{cases}
-				\displaystyle 4V_1 - 80 + 8V_1 - 8V_2 + V_1 - 6V_2 = 0 \\ \\
-				\displaystyle -3V_1 + 18V_2 + 16V_2 - 16V_1 + 16V_2 = 0
-			\end{cases}\end{equation*}
-			\begin{equation*}\begin{cases}
-				\displaystyle 13V_1 - 14V_2 = 80 \\ \\
-				\displaystyle -19V_1 + 50V_2 = 0
-			\end{cases}\end{equation*}
+				\begin{equation*}\begin{cases}
+					\displaystyle 40\left(\frac{V_1 - 20}{10} + \frac{V_1 - V_2}{5} + \frac{V_1 - 6V_2}{40}\right) = 0 \\ \\
+					\displaystyle 80\left(-\frac{3V_1 - 18V_2}{80} + \frac{V_2 - V_1}{5} + \frac{V_2}{5}\right) = 0
+				\end{cases}\end{equation*}
+				\begin{equation*}\begin{cases}
+					\displaystyle 4V_1 - 80 + 8V_1 - 8V_2 + V_1 - 6V_2 = 0 \\
+					\displaystyle -3V_1 + 18V_2 + 16V_2 - 16V_1 + 16V_2 = 0
+				\end{cases}\end{equation*}
+				\begin{equation*}\begin{cases}
+					\displaystyle 13V_1 - 14V_2 = 80 \\
+					\displaystyle -19V_1 + 50V_2 = 0
+				\end{cases}\end{equation*}
 
 			Isolate $V_1$:
-			\[13V_1 = 14V_2 + 80\]
-			\[V_1 = \frac{14V_2 + 80}{13}\]
+				\[13V_1 = 14V_2 + 80\]
+				\[V_1 = \frac{14V_2 + 80}{13}\]
 
 			Solve for $V_2$:
-			\[-19\left(\frac{14V_2 + 80}{13}\right) + 50V_2 = 0\]
-			\[-\frac{266V_2 + 1520}{13} + 50V_2 = 0\]
-			\[13\left(-\frac{266V_2 + 1520}{13} + 50V_2\right) = 0\]
-			\[-266V_2 - 1520 + 650V_2 = 0\]
-			\[384V_2 = 1520\]
-			\[V_2 = \frac{1520}{384}\]
+				\[-19\left(\frac{14V_2 + 80}{13}\right) + 50V_2 = 0\]
+				\[-\frac{266V_2 + 1520}{13} + 50V_2 = 0\]
+				\[13\left(-\frac{266V_2 + 1520}{13} + 50V_2\right) = 0\]
+				\[-266V_2 - 1520 + 650V_2 = 0\]
+				\[384V_2 = 1520\]
+				\[V_2 = \frac{1520}{384}\]
 
 			Solve for $V_1$:
-			\[V_1 = \frac{14\left(\frac{1520}{384}\right) + 80}{13}\]
-			\[V_1 = \frac{\frac{21280}{384} + 80}{13}\]
-			\[V_1 = \frac{\frac{21280}{384} + \frac{30720}{384}}{13}\]
-			\[V_1 = \frac{52000}{4992}\]
+				\[V_1 = \frac{14\left(\frac{1520}{384}\right) + 80}{13}\]
+				\[V_1 = \frac{\frac{21280}{384} + 80}{13}\]
+				\[V_1 = \frac{\frac{21280}{384} + \frac{30720}{384}}{13}\]
+				\[V_1 = \frac{52000}{4992}\]
 
 			Final answer:
-			\begin{empheq}[box=\fbox]{align*}
-				V_1 &= \qty{10.42}{\volt} \\
-				V_2 &= \qty{3.958}{\volt}
-			\end{empheq}
+				\begin{empheq}[box=\fbox]{align*}
+					V_1 &= \qty{10.42}{\volt} \\
+					V_2 &= \qty{3.958}{\volt}
+				\end{empheq}
 
 			\pagebreak{}
 
@@ -154,43 +154,43 @@
 				\draw (1.5, 0)
 					to[bulb, mirror, v_< = \qty{120}{\volt}, *-] ++(0, 6);
 
-				\draw (-1.5, 6) node[label = {[red]$V_X$}] {};
-				\draw (1.5, 6) node[label = {[red]\qty{120}{\volt}}] {};
+				\draw[color = red] (-1.5, 6) node[label = $V_X$] {};
+				\draw[color = red] (1.5, 6) node[label = \qty{120}{\volt}] {};
 			\end{circuitikz}\end{center}
 
 			Given that $P_{\text{bulb}} = \qty{60}{\watt}$ and $V_{\text{bulb}} = \qty{120}{\volt}$:
-			\[I_{\text{bulb}} = \frac{60}{120} = \frac{1}{2}\]
+				\[I_{\text{bulb}} = \frac{60}{120} = \frac{1}{2}\]
 
 			KCL $V_X$:
-			\[\frac{V_X - V_S}{10} + \frac{V_X}{55} + \frac{V_X - 120}{40} = 0\]
+				\[\frac{V_X - V_S}{10} + \frac{V_X}{55} + \frac{V_X - 120}{40} = 0\]
 
 			KCL \qty{120}{\volt}:
-			\[\frac{120 - V_X}{40} + \frac{1}{2} + \frac{120}{60} = 0\]
-			\[\frac{120 - V_X}{40} + \frac{1}{2} + 2 = 0\]
+				\[\frac{120 - V_X}{40} + \frac{1}{2} + \frac{120}{60} = 0\]
+				\[\frac{120 - V_X}{40} + \frac{1}{2} + 2 = 0\]
 
 			List down the system of equations:
-			\begin{equation*}\begin{cases}
-				\displaystyle \frac{V_X - V_S}{10} + \frac{V_X}{55} + \frac{V_X - 120}{40} = 0 \\ \\
-				\displaystyle \frac{120 - V_X}{40} + \frac{1}{2} + \frac{120}{60} = 0
-			\end{cases}\end{equation*}
+				\begin{equation*}\begin{cases}
+					\displaystyle \frac{V_X - V_S}{10} + \frac{V_X}{55} + \frac{V_X - 120}{40} = 0 \\ \\
+					\displaystyle \frac{120 - V_X}{40} + \frac{1}{2} + \frac{120}{60} = 0
+				\end{cases}\end{equation*}
 
 			Solve for $V_X$:
-			\[40\left(\frac{120 - V_X}{40} + \frac{1}{2} + 2\right) = 0\]
-			\[120 - V_X + 20 + 80 = 0\]
-			\[V_X = 220\]
+				\[40\left(\frac{120 - V_X}{40} + \frac{1}{2} + 2\right) = 0\]
+				\[120 - V_X + 20 + 80 = 0\]
+				\[V_X = 220\]
 
 			Solve for $V_S$:
-			\[\frac{220 - V_S}{10} + \frac{220}{55} + \frac{220 - 120}{40} = 0\]
-			\[\frac{220 - V_S}{10} + 4 + \frac{100}{40} = 0\]
-			\[40\left(\frac{220 - V_S}{10} + 4 + \frac{100}{40}\right) = 0\]
-			\[880 - 4V_S + 160 + 100 = 0\]
-			\[4V_S = 1140\]
-			\[V_S = 285\]
+				\[\frac{220 - V_S}{10} + \frac{220}{55} + \frac{220 - 120}{40} = 0\]
+				\[\frac{220 - V_S}{10} + 4 + \frac{100}{40} = 0\]
+				\[40\left(\frac{220 - V_S}{10} + 4 + \frac{100}{40}\right) = 0\]
+				\[880 - 4V_S + 160 + 100 = 0\]
+				\[4V_S = 1140\]
+				\[V_S = 285\]
 
 			Final answer:
-			\begin{empheq}[box=\fbox]{align*}
-				V_S &= \qty{285.0}{\volt}
-			\end{empheq}
+				\begin{empheq}[box=\fbox]{align*}
+					V_S &= \qty{285.0}{\volt}
+				\end{empheq}
 
 			\pagebreak{}
 
@@ -219,106 +219,247 @@
 				\draw (-6, -3)
 					to[R, a = \qty{40}{\ohm}] ++(0, 3);
 
-				\draw (0, 0) node[ground, rotate = 90, color = red] {};
-				\draw (0, 0) node[label = {[red]135:\qty{0}{\volt}}] {};
-				\draw (-3, 0) node[label = {[red]$V_Y$}] {};
-				\draw (-6, 0) node[label = {[red]135:$V_X$}] {};
+				\draw[color = red] (0, 0) node[ground, rotate = 90, color = red] {};
+				\draw[color = red] (0, 0) node[label = 135:\qty{0}{\volt}] {};
+				\draw[color = red] (-3, 0) node[label = $V_Y$] {};
+				\draw[color = red] (-6, 0) node[label = 135:$V_X$] {};
 				\draw[dashed, color = red] (-6.25, 1.25) rectangle (0.25, 2.75);
 			\end{circuitikz}\end{center}
 
 			\subsubsection*{(a)} \mbox{}
 
 				KCL $V_X$, \qty{0}{\volt}:
-				\[-19 + \frac{V_X - 240}{40} - I_X + \frac{-V_Y}{10} + I_Y = 0\]
+					\[-19 + \frac{V_X - 240}{40} - I_X + \frac{-V_Y}{10} + I_Y = 0\]
 
 				KCL $V_Y$:
-				\[I_X - 2I_X + \frac{V_Y}{10} = 0\]
-				\[-I_X + \frac{V_Y}{10} = 0\]
+					\[I_X - 2I_X + \frac{V_Y}{10} = 0\]
+					\[-I_X + \frac{V_Y}{10} = 0\]
 
 				KVL $V_X$, \qty{0}{\volt}:
-				\[4I_Y = -V_X\]
-				\[I_Y = -\frac{V_X}{4}\]
+					\[4I_Y = -V_X\]
+					\[I_Y = -\frac{V_X}{4}\]
 
 				We also have:
-				\[I_X = \frac{V_Y - V_X}{5}\]
+					\[I_X = \frac{V_Y - V_X}{5}\]
 
 				List down the system of equations:
-				\begin{equation*}\begin{cases}
-					\displaystyle -19 + \frac{V_X - 240}{40} - I_X + \frac{-V_Y}{10} + I_Y = 0 \\ \\
-					\displaystyle -I_X + \frac{V_Y}{10} = 0 \\ \\
-					\displaystyle I_Y = -\frac{V_X}{4} \\ \\
-					\displaystyle I_X = \frac{V_Y - V_X}{5}
-				\end{cases}\end{equation*}
+					\begin{equation*}\begin{cases}
+						\displaystyle -19 + \frac{V_X - 240}{40} - I_X + \frac{-V_Y}{10} + I_Y = 0 \\ \\
+						\displaystyle -I_X + \frac{V_Y}{10} = 0 \\ \\
+						\displaystyle I_Y = -\frac{V_X}{4} \\ \\
+						\displaystyle I_X = \frac{V_Y - V_X}{5}
+					\end{cases}\end{equation*}
 
 				Substitute $I_X$ and $I_Y$:
-				\begin{equation*}\begin{cases}
-					\displaystyle -19 + \frac{V_X - 240}{40} - \frac{V_Y - V_X}{5} + \frac{-V_Y}{10} - \frac{V_X}{4} = 0 \\ \\
-					\displaystyle -\frac{V_Y - V_X}{5} + \frac{V_Y}{10} = 0
-				\end{cases}\end{equation*}
+					\begin{equation*}\begin{cases}
+						\displaystyle -19 + \frac{V_X - 240}{40} - \frac{V_Y - V_X}{5} + \frac{-V_Y}{10} - \frac{V_X}{4} = 0 \\ \\
+						\displaystyle -\frac{V_Y - V_X}{5} + \frac{V_Y}{10} = 0
+					\end{cases}\end{equation*}
 
 				Simplify:
-				\begin{equation*}\begin{cases}
-					\displaystyle 40\left(-19 + \frac{V_X - 240}{40} - \frac{V_Y - V_X}{5} + \frac{-V_Y}{10} - \frac{V_X}{4}\right) = 0 \\ \\
-					\displaystyle 10\left(-\frac{V_Y - V_X}{5} + \frac{V_Y}{10}\right) = 0
-				\end{cases}\end{equation*}
-				\begin{equation*}\begin{cases}
-					\displaystyle -760 + V_X - 240 - 8V_Y + 8V_X - 4V_Y - 10V_X = 0 \\ \\
-					\displaystyle -2V_Y + 2V_X + V_Y = 0
-				\end{cases}\end{equation*}
-				\begin{equation*}\begin{cases}
-					\displaystyle -12V_Y - V_X - 1000 = 0\\ \\
-					\displaystyle V_Y = 2V_X
-				\end{cases}\end{equation*}
+					\begin{equation*}\begin{cases}
+						\displaystyle 40\left(-19 + \frac{V_X - 240}{40} - \frac{V_Y - V_X}{5} + \frac{-V_Y}{10} - \frac{V_X}{4}\right) = 0 \\ \\
+						\displaystyle 10\left(-\frac{V_Y - V_X}{5} + \frac{V_Y}{10}\right) = 0
+					\end{cases}\end{equation*}
+					\begin{equation*}\begin{cases}
+						\displaystyle -760 + V_X - 240 - 8V_Y + 8V_X - 4V_Y - 10V_X = 0 \\
+						\displaystyle -2V_Y + 2V_X + V_Y = 0
+					\end{cases}\end{equation*}
+					\begin{equation*}\begin{cases}
+						\displaystyle -12V_Y - V_X - 1000 = 0\\
+						\displaystyle V_Y = 2V_X
+					\end{cases}\end{equation*}
 
 				Solve for $V_X$:
-				\[-12(2V_X) - V_X - 1000 = 0\]
-				\[-25V_X = 1000\]
-				\[V_X = -40\]
+					\[-12(2V_X) - V_X - 1000 = 0\]
+					\[-25V_X = 1000\]
+					\[V_X = -40\]
 
 				Solve for $V_Y$:
-				\[V_Y = 2(-40)\]
-				\[V_Y = -80\]
+					\[V_Y = 2(-40)\]
+					\[V_Y = -80\]
 
 				Solve for $I_X$:
-				\[I_X = \frac{-80 - (-40)}{5}\]
-				\[I_X = -8\]
+					\[I_X = \frac{-80 - (-40)}{5}\]
+					\[I_X = -8\]
 
 				Solve for $I_Y$
-				\[I_Y = -\frac{-40}{4}\]
-				\[I_Y = 10\]
+					\[I_Y = -\frac{-40}{4}\]
+					\[I_Y = 10\]
 
 			\subsubsection*{(b)} \mbox{}
 
 				We have:
-				\[P_{4I_Y} = -(4I_Y)(I_{4I_Y})\]
+					\[P_{4I_Y} = -(4I_Y)(I_{4I_Y})\]
 
 				KCL \qty{0}{\volt}:
-				\[I_{4I_Y} = \frac{-V_Y}{10} + I_Y\]
+					\[I_{4I_Y} = \frac{-V_Y}{10} + I_Y\]
 
 				Solve for $I_{4I_Y}$:
-				\[I_{4I_Y} = \frac{-(-80)}{10} + 10\]
-				\[I_{4I_Y} = 18\]
+					\[I_{4I_Y} = \frac{-(-80)}{10} + 10\]
+					\[I_{4I_Y} = 18\]
 
 				Solve for $P_{4I_Y}$:
-				\[P_{4I_Y} = -(4(10))(18)\]
-				\[P_{4I_Y} = -720\]
+					\[P_{4I_Y} = -(4(10))(18)\]
+					\[P_{4I_Y} = -720\]
 
 			\subsubsection*{(c)} \mbox{}
 
-				We have:
-				\[P_{\qty{5}{\ohm}} = 5{I_X}^2\]
-
 				Solve for $P_{\qty{5}{\ohm}}$:
-				\[P_{\qty{5}{\ohm}} = 5{(-8)}^2\]
-				\[P_{\qty{5}{\ohm}} = 320\]
+					\[P_{\qty{5}{\ohm}} = 5{I_X}^2\]
+					\[P_{\qty{5}{\ohm}} = 5{(-8)}^2\]
+					\[P_{\qty{5}{\ohm}} = 320\]
 
 				Final answer:
-				\begin{empheq}[box=\fbox]{align*}
-					I_X &= \qty{-8.000}{\ampere} \\
-					I_Y &= \qty{10.00}{\ampere} \\
-					P_{4I_Y} &= \qty{-720.0}{\watt} \\
-					P_{\qty{5}{\ohm}} &= \qty{320.0}{\watt}
-				\end{empheq}
+					\begin{empheq}[box=\fbox]{align*}
+						I_X &= \qty{-8.000}{\ampere} \\
+						I_Y &= \qty{10.00}{\ampere} \\
+						P_{4I_Y} &= \qty{-720.0}{\watt} \\
+						P_{\qty{5}{\ohm}} &= \qty{320.0}{\watt}
+					\end{empheq}
 
 			\pagebreak{}
+
+
+
+		\subsection{}
+			Use nodal analysis in the circuit below to find (a) $V_X$ and $I_Y$, (b)
+			the power absorbed by the current-controlled current source, and (c), the
+			power absorbed by the \qty{20}{\ohm} resistor.
+			\begin{center}\begin{circuitikz}
+				\draw (0, 0)
+					to[cisource, l = $3I_Y$, *-] ++(-3, 0)
+					to[short, -*] ++(0, 3)
+					to[short] ++(0, 3)
+					to[R, l = \qty{5}{\ohm}, -*] ++(3, 0)
+					to[R, l = \qty{10}{\ohm}] ++(3, 0)
+					to[short, i^> = $I_Y$, -*] ++(0, -3)
+					to[short] ++(0, -3)
+					to[V, l = \qty{270}{\volt}] ++(-3, 0);
+				\draw (0, 0)
+					to[R, a = \qty{60}{\ohm}, -*] ++(0, 3)
+					to[V, invert, a = \qty{45}{\volt}] ++(0, 3);
+				\draw (3, 3)
+					to[R, a = \qty{30}{\ohm}] ++(-3, 0)
+					to[R, a = \qty{20}{\ohm}, v^< = $V_X$] ++(-3, 0);
+
+				\draw[color = red] (0, 0) node[ground] {};
+				\draw[color = red] (-3, 3) node[label = 180:$V_1$] {};
+				\draw[color = red] (0, 3) node[label = 45:$V_2$] {};
+				\draw[color = red] (0, 6) node[label = $V_3$] {};
+				\draw[dashed, color = red] (-0.75, 2.75) rectangle (0.75, 6.25);
+			\end{circuitikz}\end{center}
+
+			\subsubsection*{(a)} \mbox{}
+
+				KCL $V_1$:
+					\[-3I_Y + \frac{V_1 - V_2}{20} + \frac{V_1 - V_3}{5} = 0\]
+
+				KCL $V_2$, $V_3$:
+					\[\frac{V_3 - V_1}{5} + \frac{V_2 - V_1}{20} + \frac{V_2}{60} + \frac{V_2 - 270}{30} + I_Y = 0\]
+
+				KVL $V_2$, $V_3$:
+					\[V_3 - V_2 = 45\]
+					\[V_3 = V_2 + 45\]
+
+				We also have:
+					\[I_Y = \frac{V_3 - 270}{10}\]
+
+				List down the system of equations:
+					\begin{equation*}\begin{cases}
+						\displaystyle -3I_Y + \frac{V_1 - V_2}{20} + \frac{V_1 - V_3}{5} = 0 \\ \\
+						\displaystyle \frac{V_3 - V_1}{5} + \frac{V_2 - V_1}{20} + \frac{V_2}{60} + \frac{V_2 - 270}{30} + I_Y = 0 \\ \\
+						\displaystyle V_3 = V_2 + 45 \\ \\
+						\displaystyle I_Y = \frac{V_3 - 270}{10}
+					\end{cases}\end{equation*}
+
+				Substitute $V_3$:
+					\begin{equation*}\begin{cases}
+						\displaystyle -3I_Y + \frac{V_1 - V_2}{20} + \frac{V_1 - (V_2 + 45)}{5} = 0 \\ \\
+						\displaystyle \frac{V_2 + 45 - V_1}{5} + \frac{V_2 - V_1}{20} + \frac{V_2}{60} + \frac{V_2 - 270}{30} + I_Y = 0 \\ \\
+						\displaystyle I_Y = \frac{V_2 + 45 - 270}{10}
+					\end{cases}\end{equation*}
+					\begin{equation*}\begin{cases}
+						\displaystyle -3I_Y + \frac{V_1 - V_2}{20} + \frac{V_1 - V_2 - 45}{5} = 0 \\ \\
+						\displaystyle \frac{V_2 + 45 - V_1}{5} + \frac{V_2 - V_1}{20} + \frac{V_2}{60} + \frac{V_2 - 270}{30} + I_Y = 0 \\ \\
+						\displaystyle I_Y = \frac{V_2 - 225}{10}
+					\end{cases}\end{equation*}
+
+				Substitute $I_Y$:
+					\begin{equation*}\begin{cases}
+						\displaystyle -3\left(\frac{V_2 - 225}{10}\right) + \frac{V_1 - V_2}{20} + \frac{V_1 - V_2 - 45}{5} = 0 \\ \\
+						\displaystyle \frac{V_2 + 45 - V_1}{5} + \frac{V_2 - V_1}{20} + \frac{V_2}{60} + \frac{V_2 - 270}{30} + \frac{V_2 - 225}{10} = 0
+					\end{cases}\end{equation*}
+					\begin{equation*}\begin{cases}
+						\displaystyle -\frac{3V_2 - 675}{10} + \frac{V_1 - V_2}{20} + \frac{V_1 - V_2 - 45}{5} = 0 \\ \\
+						\displaystyle \frac{V_2 + 45 - V_1}{5} + \frac{V_2 - V_1}{20} + \frac{V_2}{60} + \frac{V_2 - 270}{30} + \frac{V_2 - 225}{10} = 0
+					\end{cases}\end{equation*}
+
+				Simplify:
+					\begin{equation*}\begin{cases}
+						\displaystyle 20\left(-\frac{3V_2 - 675}{10} + \frac{V_1 - V_2}{20} + \frac{V_1 - V_2 - 45}{5}\right) = 0 \\ \\
+						\displaystyle 60\left(\frac{V_2 + 45 - V_1}{5} + \frac{V_2 - V_1}{20} + \frac{V_2}{60} + \frac{V_2 - 270}{30} + \frac{V_2 - 225}{10}\right) = 0
+					\end{cases}\end{equation*}
+					\begin{equation*}\begin{cases}
+						\displaystyle -6V_2 + 1350 + V_1 - V_2 + 4V_1 - 4V_2 - 180 = 0 \\
+						\displaystyle 12V_2 + 540 - 12V_1 + 3V_2 - 3V_1 + V_2 + 2V_2 - 540 + 6V_2 - 1350 = 0
+					\end{cases}\end{equation*}
+					\begin{equation*}\begin{cases}
+						\displaystyle 11V_2 = 5V_1 + 1170 \\
+						\displaystyle 24V_2 = 15V_1 + 1350
+					\end{cases}\end{equation*}
+
+				Isolate $V_2$:
+					\[V_2 = \frac{5V_1 + 1170}{11}\]
+
+				Solve for $V_1$:
+					\[24\left(\frac{5V_1 + 1170}{11}\right) = 15V_1 + 1350\]
+					\[\frac{120V_1 + 28080}{11} = 15V_1 + 1350\]
+					\[120V_1 + 28080 = 11(15V_1 + 1350)\]
+					\[120V_1 + 28080 = 165V_1 + 14850\]
+					\[165V_1 - 120V_1 = 28080 - 14850\]
+					\[45V_1 = 13230\]
+					\[V_1 = 294\]
+
+				Solve for $V_2$:
+					\[V_2 = \frac{5(294) + 1170}{11}\]
+					\[V_2 = \frac{1470 + 1170}{11}\]
+					\[V_2 = 240\]
+
+				Solve for $V_3$:
+					\[V_3 = 240 + 45\]
+					\[V_3 = 285\]
+
+				Solve for $V_X$:
+					\[V_X = V_1 - V_2\]
+					\[V_X = 294 - 240\]
+					\[V_X = 54\]
+
+				Solve for $I_Y$:
+					\[I_Y = \frac{285 - 270}{10}\]
+					\[I_Y = \frac{15}{10}\]
+
+			\subsubsection*{(b)} \mbox{}
+
+				Solve for $P_{3I_Y}$:
+					\[P_{3I_Y} = -(V_1)(3I_Y)\]
+					\[P_{3I_Y} = -(294)\left(3\left(\frac{15}{10}\right)\right)\]
+					\[P_{3I_Y} = -(294)\left(\frac{45}{10}\right)\]
+					\[P_{3I_Y} = -\frac{13230}{10}\]
+					\[P_{3I_Y} = -1323\]
+
+			\subsubsection*{(c)} \mbox{}
+
+				Solve for $P_{\qty{20}{\ohm}}$:
+					\[P_{\qty{20}{\ohm}} = \frac{{V_X}^2}{20}\]
+					\[P_{\qty{20}{\ohm}} = \frac{54^2}{20}\]
+					\[P_{\qty{20}{\ohm}} = \frac{2916}{20}\]
+
+				Final answer:
+					\begin{empheq}[box=\fbox]{align*}
+						V_X &= \qty{54.00}{\volt} \\
+						I_Y &= \qty{1.500}{\ampere} \\
+						P_{3I_Y} &= \qty{-1323}{\watt} \\
+						P_{\qty{20}{\ohm}} &= \qty{145.8}{\watt}
+					\end{empheq}
 \end{document}
