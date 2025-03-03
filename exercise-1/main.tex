@@ -1,0 +1,324 @@
+% SPDX-FileCopyrightText: Copyright (C) Nile Jocson <atraphaxia@gmail.com>
+% SPDX-License-Identifier: MPL-2.0
+
+
+
+\documentclass{article}
+
+
+
+\usepackage{adjustbox}
+\usepackage{amsmath}
+\usepackage{circuitikz}
+\usepackage{empheq}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{siunitx}
+
+
+
+\ctikzset{american}
+
+
+
+\title{
+	EEE 123 \\
+	Exercise 1
+}
+
+\author{
+	Nile Jocson \\
+	\textless{}atraphaxia@gmail.com\textgreater{}
+}
+
+
+
+
+\begin{document}
+	\maketitle{}
+		\pagebreak{}
+
+	\tableofcontents{}
+		\pagebreak{}
+
+	\section{}
+		Show your solutions on the space provided. Please write legibly. \textbf{Box
+		your final answers.} Include at least four significant figures. Do not answer
+		in fractional form.
+
+
+
+		\subsection{}
+			Determine $V_1$ and $V_2$ in the circuit below. \\
+			\begin{adjustbox}{width = \textwidth}\begin{circuitikz}
+				\draw (0, 0) node[ground] {}
+					to[short, *-] ++(-8, 0)
+					to[battery, invert, a = \qty{20}{\volt}] ++(0, 3)
+					to[R, l = \qty{10}{\ohm}] ++(3, 0) node[label = -90:$V_1$] {}
+					to[short, *-] ++(0, 2)
+					to[R, l = \qty{5}{\ohm}] ++(10, 0)
+					to[short, -*] ++(0, -2) node[label = -90:$V_2$] {}
+					to[short] ++(3, 0)
+					to[R, l = \qty{5}{\ohm}] ++(0, -3)
+					to[short] ++(-10, 0);
+				\draw (-2, 0)
+					to[cvsource, invert, a = $6V_2$, *-] ++(0, 3)
+					to[R, a = \qty{40}{\ohm}, i<_ = $I_x$] ++(-3, 0);
+				\draw (2, 0)
+					to[cisource, a = $1.5I_x$, *-] ++(0, 3)
+					to[short] ++(3, 0);
+			\end{circuitikz}\end{adjustbox}
+
+			KCL $V_1$:
+			\[\frac{V_1 - 20}{10} + \frac{V_1 - V_2}{5} + I_x = 0\]
+
+			KCL $V_2$:
+			\[-\frac{3}{2}I_x + \frac{V_2 - V_1}{5} + \frac{V_2}{5} = 0\]
+
+			We also have:
+			\[I_x = \frac{V_1 - 6V_2}{40}\]
+
+			List down the system of equations:
+			\begin{equation*}\begin{cases}
+				\displaystyle \frac{V_1 - 20}{10} + \frac{V_1 - V_2}{5} + I_x = 0 \\ \\
+				\displaystyle -\frac{3}{2}I_x + \frac{V_2 - V_1}{5} + \frac{V_2}{5} = 0 \\ \\
+				\displaystyle I_x = \frac{V_1 - 6V_2}{40}
+			\end{cases}\end{equation*}
+
+			Substitute $I_x$:
+			\begin{equation*}\begin{cases}
+				\displaystyle \frac{V_1 - 20}{10} + \frac{V_1 - V_2}{5} + \frac{V_1 - 6V_2}{40} = 0 \\ \\
+				\displaystyle -\frac{3}{2}\left(\frac{V_1 - 6V_2}{40}\right) + \frac{V_2 - V_1}{5} + \frac{V_2}{5} = 0
+			\end{cases}\end{equation*}
+			\begin{equation*}\begin{cases}
+				\displaystyle \frac{V_1 - 20}{10} + \frac{V_1 - V_2}{5} + \frac{V_1 - 6V_2}{40} = 0 \\ \\
+				\displaystyle -\frac{3V_1 - 18V_2}{80} + \frac{V_2 - V_1}{5} + \frac{V_2}{5} = 0
+			\end{cases}\end{equation*}
+
+			Simplify:
+			\begin{equation*}\begin{cases}
+				\displaystyle 40\left(\frac{V_1 - 20}{10} + \frac{V_1 - V_2}{5} + \frac{V_1 - 6V_2}{40}\right) = 0 \\ \\
+				\displaystyle 80\left(-\frac{3V_1 - 18V_2}{80} + \frac{V_2 - V_1}{5} + \frac{V_2}{5}\right) = 0
+			\end{cases}\end{equation*}
+			\begin{equation*}\begin{cases}
+				\displaystyle 4V_1 - 80 + 8V_1 - 8V_2 + V_1 - 6V_2 = 0 \\ \\
+				\displaystyle -3V_1 + 18V_2 + 16V_2 - 16V_1 + 16V_2 = 0
+			\end{cases}\end{equation*}
+			\begin{equation*}\begin{cases}
+				\displaystyle 13V_1 - 14V_2 = 80 \\ \\
+				\displaystyle -19V_1 + 50V_2 = 0
+			\end{cases}\end{equation*}
+
+			Isolate $V_1$:
+			\[13V_1 = 14V_2 + 80\]
+			\[V_1 = \frac{14V_2 + 80}{13}\]
+
+			Solve for $V_2$:
+			\[-19\left(\frac{14V_2 + 80}{13}\right) + 50V_2 = 0\]
+			\[-\frac{266V_2 + 1520}{13} + 50V_2 = 0\]
+			\[13\left(-\frac{266V_2 + 1520}{13} + 50V_2\right) = 0\]
+			\[-266V_2 - 1520 + 650V_2 = 0\]
+			\[384V_2 = 1520\]
+			\[V_2 = \frac{1520}{384}\]
+
+			Solve for $V_1$:
+			\[V_1 = \frac{14\left(\frac{1520}{384}\right) + 80}{13}\]
+			\[V_1 = \frac{\frac{21280}{384} + 80}{13}\]
+			\[V_1 = \frac{\frac{21280}{384} + \frac{30720}{384}}{13}\]
+			\[V_1 = \frac{52000}{4992}\]
+
+			Final answer:
+			\begin{empheq}[box=\fbox]{align*}
+				V_1 &= \qty{10.42}{\volt} \\
+				V_2 &= \qty{3.958}{\volt}
+			\end{empheq}
+
+			\pagebreak{}
+
+
+
+		\subsection{}
+			A \qty{120}{\volt}, \qty{60}{\watt} light bulb needs to operate under rated
+			conditions. What must be the rating of the battery, $V_S$, to do so?
+			\begin{center}\begin{circuitikz}
+				\draw (0, 0) node[ground] {}
+					to[short, *-] ++(-4.5, 0)
+					to[battery, invert, a = $V_S$] ++(0, 3)
+					to[R, a = \qty{10}{\ohm}] ++(0, 3)
+					to[short, -*] ++(3, 0)
+					to[R, -*, l = \qty{40}{\ohm}] ++(3, 0)
+					to[R, l = \qty{60}{\ohm}] ++(3, 0)
+					to[short] ++(0, -6)
+					to[short] ++(-4.5, 0);
+				\draw (-1.5, 0)
+					to[R, a = \qty{55}{\ohm}, *-] ++(0, 6);
+				\draw (1.5, 0)
+					to[bulb, mirror, v_< = \qty{120}{\volt}, *-] ++(0, 6);
+
+				\draw (-1.5, 6) node[label = {[red]$V_X$}] {};
+				\draw (1.5, 6) node[label = {[red]\qty{120}{\volt}}] {};
+			\end{circuitikz}\end{center}
+
+			Given that $P_{\text{bulb}} = \qty{60}{\watt}$ and $V_{\text{bulb}} = \qty{120}{\volt}$:
+			\[I_{\text{bulb}} = \frac{60}{120} = \frac{1}{2}\]
+
+			KCL $V_X$:
+			\[\frac{V_X - V_S}{10} + \frac{V_X}{55} + \frac{V_X - 120}{40} = 0\]
+
+			KCL \qty{120}{\volt}:
+			\[\frac{120 - V_X}{40} + \frac{1}{2} + \frac{120}{60} = 0\]
+			\[\frac{120 - V_X}{40} + \frac{1}{2} + 2 = 0\]
+
+			List down the system of equations:
+			\begin{equation*}\begin{cases}
+				\displaystyle \frac{V_X - V_S}{10} + \frac{V_X}{55} + \frac{V_X - 120}{40} = 0 \\ \\
+				\displaystyle \frac{120 - V_X}{40} + \frac{1}{2} + \frac{120}{60} = 0
+			\end{cases}\end{equation*}
+
+			Solve for $V_X$:
+			\[40\left(\frac{120 - V_X}{40} + \frac{1}{2} + 2\right) = 0\]
+			\[120 - V_X + 20 + 80 = 0\]
+			\[V_X = 220\]
+
+			Solve for $V_S$:
+			\[\frac{220 - V_S}{10} + \frac{220}{55} + \frac{220 - 120}{40} = 0\]
+			\[\frac{220 - V_S}{10} + 4 + \frac{100}{40} = 0\]
+			\[40\left(\frac{220 - V_S}{10} + 4 + \frac{100}{40}\right) = 0\]
+			\[880 - 4V_S + 160 + 100 = 0\]
+			\[4V_S = 1140\]
+			\[V_S = 285\]
+
+			Final answer:
+			\begin{empheq}[box=\fbox]{align*}
+				V_S &= \qty{285.0}{\volt}
+			\end{empheq}
+
+			\pagebreak{}
+
+
+
+		\subsection{}
+			Use nodal analysis in the circuit below to find (a) $I_X$ and $I_Y$, (b)
+			the power absorbed by the current-controlled voltage source, and (c) the
+			power absorbed by the \qty{5}{\ohm} resistor.
+			\begin{center}\begin{circuitikz}
+				\draw (0, 0)
+					to[V, invert, l = \qty{240}{\volt}, i_> = $I_Y$, *-] ++(0, -3)
+					to[short, -*] ++(-3, 0)
+					to[short, -*] ++(-3, 0)
+					to[short] ++(-3, 0)
+					to[I, l = \qty{19}{\ampere}] ++(0, 3)
+					to[short, -*] ++(3, 0)
+					to[short] ++(0, 2)
+					to[cvsource, invert, a = $4I_Y$] ++(6, 0)
+					to[short] ++(0, -2);
+				\draw (0, 0)
+					to[R, a = \qty{10}{\ohm}, -*] ++(-3, 0)
+					to[R, a = \qty{5}{\ohm}, i^> = $I_X$] ++(-3, 0);
+				\draw (-3, -3)
+					to[cisource, a = $2I_X$] ++(0, 3);
+				\draw (-6, -3)
+					to[R, a = \qty{40}{\ohm}] ++(0, 3);
+
+				\draw (0, 0) node[ground, rotate = 90, color = red] {};
+				\draw (0, 0) node[label = {[red]135:\qty{0}{\volt}}] {};
+				\draw (-3, 0) node[label = {[red]$V_Y$}] {};
+				\draw (-6, 0) node[label = {[red]135:$V_X$}] {};
+				\draw[dashed, color = red] (-6.25, 1.25) rectangle (0.25, 2.75);
+			\end{circuitikz}\end{center}
+
+			\subsubsection*{(a)} \mbox{}
+
+				KCL $V_X$, \qty{0}{\volt}:
+				\[-19 + \frac{V_X - 240}{40} - I_X + \frac{-V_Y}{10} + I_Y = 0\]
+
+				KCL $V_Y$:
+				\[I_X - 2I_X + \frac{V_Y}{10} = 0\]
+				\[-I_X + \frac{V_Y}{10} = 0\]
+
+				KVL $V_X$, \qty{0}{\volt}:
+				\[4I_Y = -V_X\]
+				\[I_Y = -\frac{V_X}{4}\]
+
+				We also have:
+				\[I_X = \frac{V_Y - V_X}{5}\]
+
+				List down the system of equations:
+				\begin{equation*}\begin{cases}
+					\displaystyle -19 + \frac{V_X - 240}{40} - I_X + \frac{-V_Y}{10} + I_Y = 0 \\ \\
+					\displaystyle -I_X + \frac{V_Y}{10} = 0 \\ \\
+					\displaystyle I_Y = -\frac{V_X}{4} \\ \\
+					\displaystyle I_X = \frac{V_Y - V_X}{5}
+				\end{cases}\end{equation*}
+
+				Substitute $I_X$ and $I_Y$:
+				\begin{equation*}\begin{cases}
+					\displaystyle -19 + \frac{V_X - 240}{40} - \frac{V_Y - V_X}{5} + \frac{-V_Y}{10} - \frac{V_X}{4} = 0 \\ \\
+					\displaystyle -\frac{V_Y - V_X}{5} + \frac{V_Y}{10} = 0
+				\end{cases}\end{equation*}
+
+				Simplify:
+				\begin{equation*}\begin{cases}
+					\displaystyle 40\left(-19 + \frac{V_X - 240}{40} - \frac{V_Y - V_X}{5} + \frac{-V_Y}{10} - \frac{V_X}{4}\right) = 0 \\ \\
+					\displaystyle 10\left(-\frac{V_Y - V_X}{5} + \frac{V_Y}{10}\right) = 0
+				\end{cases}\end{equation*}
+				\begin{equation*}\begin{cases}
+					\displaystyle -760 + V_X - 240 - 8V_Y + 8V_X - 4V_Y - 10V_X = 0 \\ \\
+					\displaystyle -2V_Y + 2V_X + V_Y = 0
+				\end{cases}\end{equation*}
+				\begin{equation*}\begin{cases}
+					\displaystyle -12V_Y - V_X - 1000 = 0\\ \\
+					\displaystyle V_Y = 2V_X
+				\end{cases}\end{equation*}
+
+				Solve for $V_X$:
+				\[-12(2V_X) - V_X - 1000 = 0\]
+				\[-25V_X = 1000\]
+				\[V_X = -40\]
+
+				Solve for $V_Y$:
+				\[V_Y = 2(-40)\]
+				\[V_Y = -80\]
+
+				Solve for $I_X$:
+				\[I_X = \frac{-80 - (-40)}{5}\]
+				\[I_X = -8\]
+
+				Solve for $I_Y$
+				\[I_Y = -\frac{-40}{4}\]
+				\[I_Y = 10\]
+
+			\subsubsection*{(b)} \mbox{}
+
+				We have:
+				\[P_{4I_Y} = -(4I_Y)(I_{4I_Y})\]
+
+				KCL \qty{0}{\volt}:
+				\[I_{4I_Y} = \frac{-V_Y}{10} + I_Y\]
+
+				Solve for $I_{4I_Y}$:
+				\[I_{4I_Y} = \frac{-(-80)}{10} + 10\]
+				\[I_{4I_Y} = 18\]
+
+				Solve for $P_{4I_Y}$:
+				\[P_{4I_Y} = -(4(10))(18)\]
+				\[P_{4I_Y} = -720\]
+
+			\subsubsection*{(c)} \mbox{}
+
+				We have:
+				\[P_{\qty{5}{\ohm}} = 5{I_X}^2\]
+
+				Solve for $P_{\qty{5}{\ohm}}$:
+				\[P_{\qty{5}{\ohm}} = 5{(-8)}^2\]
+				\[P_{\qty{5}{\ohm}} = 320\]
+
+				Final answer:
+				\begin{empheq}[box=\fbox]{align*}
+					I_X &= \qty{-8.000}{\ampere} \\
+					I_Y &= \qty{10.00}{\ampere} \\
+					P_{4I_Y} &= \qty{-720.0}{\watt} \\
+					P_{\qty{5}{\ohm}} &= \qty{320.0}{\watt}
+				\end{empheq}
+
+			\pagebreak{}
+\end{document}
